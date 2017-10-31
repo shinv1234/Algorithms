@@ -1,5 +1,8 @@
 # selection_sort
 def fnd_lgst_idx(lst, last):
+    """
+    
+    """
     chngd_lst = lst[0:last+1]
     lgst_idx = 0
     for i in range(1, len(chngd_lst)):
@@ -8,6 +11,9 @@ def fnd_lgst_idx(lst, last):
     return lgst_idx
 
 def selection_sort(lst):
+    """
+    
+    """
     for last in range(len(lst) -1, 0, -1):
         last_elmt = lst[last]
         lgst_idx = fnd_lgst_idx(lst, last)
@@ -19,6 +25,9 @@ def selection_sort(lst):
 
 # bubble_sort
 def bubble_sort(lst):
+    """
+    
+    """
     for last in range(len(lst)-1, 0, -1):
         for i in range(last):
             if lst[i] > lst[i+1]:
@@ -31,6 +40,9 @@ def bubble_sort(lst):
 
 # insertion_sort
 def insertion_sort(lst):
+    """
+    
+    """
     for i in range(1, len(lst)):
         idx = i - 1
         isrt_elmt = lst[i]
@@ -44,6 +56,9 @@ def insertion_sort(lst):
 
 # merge_sort
 def merge(left, right):
+    """
+    
+    """
     result = []
     while len(left) > 0 or len(right) > 0:
         if len(left) > 0 and len(right) > 0:
@@ -62,6 +77,9 @@ def merge(left, right):
     return result
 
 def merge_sort(list):
+    """
+    
+    """
     ''' # merge_sort([2, 4, 1, 3]) '''
     if len(list) <= 1:
         return list
@@ -84,6 +102,9 @@ def merge_sort(list):
 
 # quick_sort
 def partition(lst):
+    """
+    
+    """
     changed_lst = []
     comparison_element = lst[-1]
     comparison_idx = 0
@@ -97,6 +118,9 @@ def partition(lst):
     return changed_lst, comparison_idx
 
 def quick_sort(lst):
+    """
+    
+    """
     if len(lst) <= 1:
         return lst
     

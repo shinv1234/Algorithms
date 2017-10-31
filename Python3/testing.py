@@ -1,4 +1,5 @@
-# heap sort
+# heap sort 
+# Why cannot execute..;;
 def heapify(lst, k, lst_size):
     left = 2*k
     right = 2*k+1
