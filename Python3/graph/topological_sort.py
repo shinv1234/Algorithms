@@ -26,3 +26,24 @@ def kahn_topsort(graph): # https://algocoding.wordpress.com/2015/04/05/topologic
         return L
     else:                    # if there is a cycle,  
         return []            # then return an empty list
+    
+
+def dfs_ts(graph, visited, v, order_list):
+    visited[v] = 1
+    print('v:', v, 'visited[v]:', visited[v], 'graph[v]:', graph[v])
+    for nv in graph[v]:
+        print('nv:', nv, 'visited[nv]:', visited[nv])
+        if visited[nv] == 0:
+            dfs_ts(graph, visited, nv, order_list)
+    order_list.insert(0, v)
+    print('order_list:', order_list)
+    
+def topological_sort(graph):
+    order_list = []
+    visited = dict()
+    for v in graph:
+        visited[v] = 0
+    for v in graph:
+        if visited[v] == 0:
+            dfs_ts(graph, visited, v, order_list)
+    return order_list
